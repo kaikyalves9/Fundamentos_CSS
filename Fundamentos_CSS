@@ -3,43 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introdução ao CSS</title>
+    <title>Layout Responsivo</title>
     <style>
         body {
-            background-color: #D2B48C; /* Tonalidade de marrom claro */
-            font-size: 40px; /* Tamanho do texto */
-            color: white; /* Cor da letra */
-            text-align: center; /* Alinhamento do texto */
-            font-family: 'Lucida Sans', sans-serif; /* Fonte da letra */
-            padding: 50px 200px; /* Espaçamento superior/inferior e lateral */
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-        h1:hover {
-            background-color: black; /* Fundo muda para preto ao passar o mouse */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
         }
-        p {
-            font-family: Arial, sans-serif; /* Fonte do conteúdo */
-            text-indent: 20px; /* Recuo de 20px */
+        nav {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            width: 20%;
+            height: calc(100% - 50px);
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
         }
-        .fundamentals {
-            font-weight: bold; /* Texto em negrito */
-            font-size: 20px; /* Tamanho da letra */
+        main {
+            margin-left: 20%;
+            padding: 60px 20px 50px 20px; /* Top padding for header and bottom for footer */
+            height: calc(100% - 100px); /* Adjust height for header and footer */
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        li {
-            text-align: justify; /* Alinhamento justificado dos itens da lista */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
-    <h1>Cascading Style Sheets (CSS): Uma Introdução</h1>
-    <p>Cascading Style Sheets (CSS) é uma linguagem de estilo usada para descrever a apresentação de um documento HTML (ou XML). Enquanto o HTML fornece a estrutura de uma página da web, o CSS permite que você altere a aparência dessa estrutura.</p>
-    <p>Com CSS, você pode controlar coisas como cores, fontes, espaçamento, layout e muito mais. A separação de conteúdo (HTML) e estilo (CSS) é uma prática essencial para o desenvolvimento web moderno, pois permite uma manutenção mais fácil, reutilização de código e flexibilidade de design.</p>
-    <h2 class="fundamentals">Conceitos Fundamentais de CSS:</h2>
-    <ol>
-        <li>Seletor: Um seletor é usado para selecionar os elementos HTML aos quais você deseja aplicar estilos. Pode ser um elemento HTML específico, uma classe ou um ID.</li>
-        <li>Propriedades: As propriedades são características individuais que você deseja alterar, como cor, tamanho da fonte, margens, etc.</li>
-        <li>Valor: Cada propriedade tem um valor associado que define como essa propriedade deve ser aplicada. Por exemplo, uma cor pode ser definida como "vermelho" ou um tamanho de fonte como "14px".</li>
-        <li>Declaração: Uma declaração é composta por uma propriedade e um valor, separados por dois pontos, e terminados por um ponto e vírgula. Por exemplo, color: blue; é uma declaração que define a cor do texto como azul.</li>
-        <li>Regras CSS: As regras CSS consistem em um seletor e um conjunto de declarações. Quando um navegador encontra uma regra CSS, ele aplica as declarações associadas aos elementos correspondentes.</li>
-    </ol>
+    <header>
+        <h1>Menu Superior</h1>
+    </header>
+    <nav>
+        <h2>Menu Lateral</h2>
+        <ul>
+            <li><a href="#" style="color: white;">Link 1</a></li>
+            <li><a href="#" style="color: white;">Link 2</a></li>
+            <li><a href="#" style="color: white;">Link 3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Conteúdo Principal</h2>
+        <p>Este é o conteúdo principal da página.</p>
+    </main>
+    <footer>
+        <p>Rodapé Fixo</p>
+    </footer>
 </body>
 </html>
